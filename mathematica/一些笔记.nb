@@ -1,0 +1,188 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6348,        180]
+NotebookOptionsPosition[      5614,        161]
+NotebookOutlinePosition[      6021,        178]
+CellTagsIndexPosition[      5978,        175]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "\:56db\:5143\:6570\:ff1a\n\tq=  x +ai+bj+ck\n\:4e58\:6cd5\:89c4\:5219\:ff1a\
+\n\tij=k,jk=i,ki=j,ijk=ii=jj=kk=-1\n\:5171\:8f6d\:ff1a\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[{"q"},
+     "Conjugate"], "=", 
+    RowBox[{"x", "-", "ai", "-", "bj", "-", "ck"}]}], TraditionalForm]],
+  CellChangeTimes->{{3.955666372659161*^9, 3.955666417440907*^9}, {
+   3.955666631833259*^9, 3.955666647943088*^9}, {3.955666767912401*^9, 
+   3.955666782013027*^9}},ExpressionUUID->
+  "52fde118-9150-4968-886e-bab30ff6a26e"],
+ "\n\:6a21:\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[{"q"},
+     "Norm"], "=", 
+    RowBox[{"q", " ", 
+     TemplateBox[{"q"},
+      "Conjugate"]}]}], TraditionalForm]],
+  CellChangeTimes->{{3.955666372659161*^9, 3.955666417440907*^9}, {
+   3.955666631833259*^9, 3.955666647943088*^9}, {3.955666767912401*^9, 
+   3.955666782013027*^9}, {3.955666886819684*^9, 3.9556669197532787`*^9}},
+  ExpressionUUID->"ad69f33c-8b7f-420e-a4ee-4aa2b064c396"],
+ "\n\:6c42\:9006\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[{"q"},
+     "Inverse"], "=", 
+    FractionBox[
+     TemplateBox[{"q"},
+      "Conjugate"], 
+     SuperscriptBox[
+      TemplateBox[{"q"},
+       "Norm"], "2"]]}], TraditionalForm]],
+  CellChangeTimes->{{3.955666372659161*^9, 3.955666417440907*^9}, {
+   3.955666631833259*^9, 3.955666647943088*^9}},ExpressionUUID->
+  "9a010f25-167b-454e-a2e9-647a78becab4"],
+ "\n\:65cb\:8f6c\:ff1a a\:56f4\:7ed5V\:65cb\:8f6c\[Theta]\:5ea6\:5f97\:5230b\
+\:ff0cq\:662f\:5355\:4f4d\:56db\:5143\:6570\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"q", " ", "a", " ", 
+     TemplateBox[{"q"},
+      "Conjugate"]}], "=", "b"}], TraditionalForm]],ExpressionUUID->
+  "cb24e13a-16fc-4a74-952e-0a2741edb9ff"],
+ " \:ff08 ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     TemplateBox[{"q"},
+      "Norm"], "=", "1"}], ","}], TraditionalForm]],
+  CellChangeTimes->{{3.955666372659161*^9, 3.955666417440907*^9}, {
+   3.955666631833259*^9, 3.955666647943088*^9}, {3.955666767912401*^9, 
+   3.955666782013027*^9}, {3.955666886819684*^9, 3.9556669197532787`*^9}},
+  ExpressionUUID->"6e8ac4fc-b334-430d-b714-da3aa899652a"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"q", "=", 
+    RowBox[{
+     RowBox[{"cos", "(", 
+      FractionBox["\[Theta]", "2"], ")"}], "+", 
+     RowBox[{"V", " ", 
+      RowBox[{"sin", "(", 
+       FractionBox["\[Theta]", "2"], ")"}]}]}]}], TraditionalForm]],
+  CellChangeTimes->{{3.955667607516295*^9, 3.955667643749217*^9}, 
+    3.9556676854075527`*^9, 3.955667770914548*^9},ExpressionUUID->
+  "0781d627-fce1-4f37-9a46-8903f33d24fc"],
+ " )"
+}], "Text",
+ CellChangeTimes->{{3.955667886919648*^9, 3.955667976298814*^9}, {
+  3.95566801886128*^9, 
+  3.955668024851494*^9}},ExpressionUUID->"5b5584f6-7869-4939-a23f-\
+befcf2151a22"],
+
+Cell["\<\
+\:5916\:4ee3\:6570\:ff1a 1, e1,e2,e3,e1^e2,e2^e3,e3^e1,e1^e2^e3
+\:7f29\:5e76\:ff1aa\:7684\:6b63\:4ea4\:8865\:548cb\:7684\:4ea4
+\t<a,b> 
+\:5916\:79ef\:ff1a
+\ta^b = - b^a
+\:5bf9\:5076\:ff1a a\:548cI\:7684\:6b63\:4ea4\:8865\:7a7a\:95f4
+\ta*  = - <a,I>
+\ta** = - a
+\:76f4\:63a5\:8868\:793a\:ff1a
+\tx^a=0
+\:5bf9\:5076\:8868\:793a\:ff1a
+\t<x,a*>=0
+\t\
+\>", "Text",
+ CellChangeTimes->{{3.9556711721953907`*^9, 3.955671217873329*^9}, {
+  3.9556713613691607`*^9, 3.9556713686602793`*^9}, {3.955671428612844*^9, 
+  3.95567148346369*^9}, {3.9556715204340878`*^9, 3.955671532638085*^9}, {
+  3.955671688289488*^9, 3.95567181797694*^9}, {3.955671911514756*^9, 
+  3.9556719711989717`*^9}},ExpressionUUID->"2840807c-bc2a-4d10-9536-\
+63e3dd810a8c"],
+
+Cell[TextData[{
+ "\:51e0\:4f55\:4ee3\:6570\:ff1a3\:7ef4\:7a7a\:95f4\:67098\:4e2a\:57fa 1, \
+e1,e2,e3,e1e2,e2e3,e3e1,e1e2e3\:ff0c\:5076\:7684\:5b50\:7a7a\:95f4\:ff081\
+\:ff0ce1e2,e2e3,e3e1)\:5c31\:662f\:56db\:5143\:6570\n\:4e58\:6cd5\:ff1a\n\tab \
+= a.b+a^b   (\:5c06b\:8f6c\:5411a)\n\ta^b=(ab-ba)/2\n\ta.b=(ab+ba)/2\n\:6ce8\
+\:610f\:ff1ae1e1=1 \:800ce1^e1=0\n\:6c42\:9006\:ff1a\n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    TemplateBox[{"a"},
+     "Inverse"], "=", 
+    FractionBox["a", 
+     SuperscriptBox[
+      TemplateBox[{"a"},
+       "Norm"], "2"]]}], TraditionalForm]],
+  CellChangeTimes->{{3.955666372659161*^9, 3.955666417440907*^9}, {
+   3.955666631833259*^9, 3.955666647943088*^9}},ExpressionUUID->
+  "244cdfb1-45bd-4f2d-976f-878c2fe6a095"]
+}], "Text",
+ CellChangeTimes->{
+  3.955671908300581*^9, {3.955672008438644*^9, 3.9556720246050463`*^9}, {
+   3.9556722249924917`*^9, 3.955672287910091*^9}, {3.955672331896926*^9, 
+   3.955672444686304*^9}, {3.9556725120052643`*^9, 
+   3.95567264693933*^9}},ExpressionUUID->"227e8766-d28b-4438-a82d-\
+d6a0d701b24c"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.955672290123096*^9, 
+  3.955672290464403*^9}},ExpressionUUID->"76cc8609-b7ea-4328-864f-\
+d41b94ca4852"],
+
+Cell[BoxData[
+ FormBox["", TraditionalForm]], "Input",
+ CellChangeTimes->{{3.9556713725987587`*^9, 3.955671419879978*^9}, 
+   3.955671800158333*^9},ExpressionUUID->"9e17786f-c606-457a-8b3f-\
+74c4ac4f9223"]
+},
+WindowSize->{808, 675},
+WindowMargins->{{Automatic, 304}, {Automatic, 0}},
+FrontEndVersion->"13.1 for Mac OS X x86 (64-bit) \
+(2022\:5e746\:670816\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"4ebe8d50-3afa-4763-bef0-d6d8e056240e"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2819, 79, 308, "Text",ExpressionUUID->"5b5584f6-7869-4939-a23f-befcf2151a22"],
+Cell[3380, 101, 741, 20, 311, "Text",ExpressionUUID->"2840807c-bc2a-4d10-9536-63e3dd810a8c"],
+Cell[4124, 123, 1069, 24, 205, "Text",ExpressionUUID->"227e8766-d28b-4438-a82d-d6a0d701b24c"],
+Cell[5196, 149, 206, 4, 73, "Input",ExpressionUUID->"76cc8609-b7ea-4328-864f-d41b94ca4852"],
+Cell[5405, 155, 205, 4, 26, "Input",ExpressionUUID->"9e17786f-c606-457a-8b3f-74c4ac4f9223"]
+}
+]
+*)
+

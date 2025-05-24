@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     46495,       1112]
-NotebookOptionsPosition[     45688,       1090]
-NotebookOutlinePosition[     46117,       1108]
-CellTagsIndexPosition[     46074,       1105]
+NotebookDataLength[     47722,       1137]
+NotebookOptionsPosition[     46725,       1113]
+NotebookOutlinePosition[     47154,       1131]
+CellTagsIndexPosition[     47111,       1128]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -322,7 +322,7 @@ Cell[BoxData[{
          "]"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"color", "=", 
         RowBox[{"{", 
-         RowBox[{"Black", ",", " ", "Brown", ",", "Purple"}], "}"}]}], ";", 
+         RowBox[{"Cyan", ",", "Cyan", ",", "Cyan"}], "}"}]}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{"size", "=", "0.2"}], ";", "\[IndentingNewLine]", 
        RowBox[{"graphics", " ", "=", 
@@ -510,235 +510,239 @@ Cell[BoxData[{
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"PlotMatrix", "[", "M_", "]"}], ":=", 
-   RowBox[{"Module", "[", "\[IndentingNewLine]", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"MM", ",", "MM3", ",", "\[IndentingNewLine]", 
-       RowBox[{"eigenGraphic", "=", 
-        RowBox[{"{", "}"}]}], ",", 
-       RowBox[{"eigenInfos", "=", 
-        RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", 
-       RowBox[{"svdGra", "=", 
-        RowBox[{"{", "}"}]}], ",", 
-       RowBox[{"svdInfo", "=", 
-        RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", "graphic", ",", 
-       "info", ",", "\[IndentingNewLine]", "ori", ",", "start", ",", "end", 
-       ",", "len"}], "}"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]",
-      "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"PlotMatrix", "[", "M_", "]"}], ":=", 
+    RowBox[{"Module", "[", "\[IndentingNewLine]", 
      RowBox[{
-      RowBox[{"MM", " ", "=", "M"}], ";", "\[IndentingNewLine]", 
-      "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"eigenGraphic", ",", "eigenInfos"}], "}"}], "=", 
-       RowBox[{"ComplexEigenTest", "[", "MM", "]"}]}], ";", 
+      RowBox[{"{", 
+       RowBox[{"MM", ",", "MM3", ",", "\[IndentingNewLine]", 
+        RowBox[{"eigenGraphic", "=", 
+         RowBox[{"{", "}"}]}], ",", 
+        RowBox[{"eigenInfos", "=", 
+         RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"svdGra", "=", 
+         RowBox[{"{", "}"}]}], ",", 
+        RowBox[{"svdInfo", "=", 
+         RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", "graphic", ",", 
+        "info", ",", "\[IndentingNewLine]", "ori", ",", "start", ",", "end", 
+        ",", "len"}], "}"}], ",", "\[IndentingNewLine]", 
       "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"{", 
-        RowBox[{"svdGra", ",", "svdInfo"}], "}"}], "=", 
-       RowBox[{"DealSVD", "[", "MM", "]"}]}], ";", "\[IndentingNewLine]", 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-      RowBox[{"start", "=", 
-       RowBox[{"-", "30"}]}], ";", 
-      RowBox[{"end", "=", 
-       RowBox[{"-", "start"}]}], ";", 
-      RowBox[{"len", "=", "end"}], ";", "\[IndentingNewLine]", 
-      "\[IndentingNewLine]", 
-      RowBox[{"graphic", "=", 
+       RowBox[{"MM", " ", "=", "M"}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"eigenGraphic", ",", "eigenInfos"}], "}"}], "=", 
+        RowBox[{"ComplexEigenTest", "[", "MM", "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"svdGra", ",", "svdInfo"}], "}"}], "=", 
+        RowBox[{"DealSVD", "[", "MM", "]"}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"start", "=", 
+        RowBox[{"-", "30"}]}], ";", 
+       RowBox[{"end", "=", 
+        RowBox[{"-", "start"}]}], ";", 
+       RowBox[{"len", "=", "end"}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"graphic", "=", 
+        RowBox[{
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"StreamPlot3D", "[", 
+            RowBox[{
+             FormBox[
+              RowBox[{"MM", ".", 
+               RowBox[{"{", 
+                RowBox[{"x", ",", "y", ",", "z"}], "}"}]}],
+              TraditionalForm], ",", 
+             RowBox[{"{", 
+              RowBox[{"x", ",", "start", ",", "end"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"y", ",", "start", ",", "end"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"z", ",", "start", ",", "end"}], "}"}], ",", 
+             RowBox[{"StreamStyle", "->", 
+              RowBox[{"{", 
+               RowBox[{"Opacity", "[", "0.2", "]"}], "}"}]}], ",", 
+             RowBox[{"StreamPoints", "\[Rule]", "20"}]}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{
+             RowBox[{"VectorPlot3D", "[", 
+              RowBox[{
+               FormBox[
+                RowBox[{"MM", ".", 
+                 RowBox[{"{", 
+                  RowBox[{"x", ",", "y", ",", "z"}], "}"}]}],
+                TraditionalForm], ",", 
+               RowBox[{"{", 
+                RowBox[{"x", ",", "start", ",", "end"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"y", ",", "start", ",", "end"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"z", ",", "start", ",", "end"}], "}"}], ",", 
+               RowBox[{"VectorStyle", "->", 
+                RowBox[{"Opacity", "[", "0.1", "]"}]}]}], "]"}], ","}], 
+            "*)"}], "\[IndentingNewLine]", 
+           RowBox[{
+           "(*", "\:6620\:5c04\:540e\:7684\:5411\:91cf\:957f\:5ea6", "*)"}], 
+           "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{
+             RowBox[{"ContourPlot3D", "[", 
+              RowBox[{
+               FormBox[
+                RowBox[{"1", "/", 
+                 RowBox[{"Norm", "[", 
+                  RowBox[{
+                   RowBox[{"Inverse", "[", "MM", "]"}], ".", 
+                   RowBox[{"{", 
+                    RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "]"}]}],
+                TraditionalForm], ",", 
+               RowBox[{"{", 
+                RowBox[{"x", ",", "start", ",", "end"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"y", ",", "start", ",", "end"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"z", ",", "start", ",", "end"}], "}"}], ",", 
+               RowBox[{"BoundaryStyle", "->", 
+                RowBox[{"Opacity", "[", "0.2", "]"}]}]}], "]"}], ","}], 
+            "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           RowBox[{"(*", "\:539f\:5750\:6807\:7cfb", "*)"}], 
+           "\[IndentingNewLine]", 
+           RowBox[{"ListPointPlot3D", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "0", ",", "0"}], "}"}], "}"}], ",", 
+             RowBox[{"PlotStyle", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[<|"color" -> GrayLevel[0.5]|>,
+                 "GrayLevelColorSwatchTemplate"], ",", 
+                RowBox[{"PointSize", "[", "Large", "]"}]}], "}"}]}]}], "]"}], 
+           ",", "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{
+             RowBox[{"DrawArrow", "[", 
+              RowBox[{"ori", ",", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"1", ",", "0", ",", "0"}], "}"}], "*", "20"}], ",", 
+               "Red", ",", "0.1", ",", "0.8"}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"DrawArrow", "[", 
+              RowBox[{"ori", ",", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "1", ",", "0"}], "}"}], "*", "20"}], ",", 
+               "Green", ",", "0.1", ",", "0.8"}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"DrawArrow", "[", 
+              RowBox[{"ori", ",", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "0", ",", "1"}], "}"}], "*", "20"}], ",", 
+               "Blue", ",", "0.1", ",", "0.8"}], "]"}], ","}], "*)"}], 
+           "\[IndentingNewLine]", 
+           RowBox[{"DrawMatrixAxis", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"1", ",", "0", ",", "0"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "1", ",", "0"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "0", ",", "1"}], "}"}]}], "}"}], "*", 
+              "20"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"Red", ",", "Green", ",", "Blue"}], "}"}], ",", "0.1"}],
+             "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"DrawSphere", "[", 
+            RowBox[{"M", ",", "0.5"}], "]"}], ",", "\[IndentingNewLine]", 
+           "\[IndentingNewLine]", 
+           RowBox[{
+           "(*", "\:84dd\:8272\:53d8\:6362\:540e\:77e9\:9635\:5411\:91cf", 
+            "*)"}], "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{
+             RowBox[{"DrawArrow", "[", 
+              RowBox[{"ori", ",", 
+               RowBox[{
+                RowBox[{"MM", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"All", ",", "1"}], "]"}], "]"}], "*", "5"}], ",", 
+               "Red", ",", "0.3", ",", "0.8"}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"DrawArrow", "[", 
+              RowBox[{"ori", ",", 
+               RowBox[{
+                RowBox[{"MM", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"All", ",", "2"}], "]"}], "]"}], "*", "5"}], ",", 
+               "Green", ",", "0.3", ",", "0.8"}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"DrawArrow", "[", 
+              RowBox[{"ori", ",", 
+               RowBox[{
+                RowBox[{"MM", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"All", ",", "3"}], "]"}], "]"}], "*", "5"}], ",", 
+               "Blue", ",", "0.3", ",", "0.8"}], "]"}], ","}], "*)"}], 
+           "\[IndentingNewLine]", 
+           RowBox[{"DrawMatrixAxis", "[", 
+            RowBox[{
+             RowBox[{"M", "*", "5"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"Red", ",", "Green", ",", "Blue"}], "}"}], ",", "0.3"}],
+             "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"(*", "\:53d8\:6362\:540e\:7684\:7403", "*)"}], 
+           "\[IndentingNewLine]", 
+           RowBox[{"DrawSphere", "[", 
+            RowBox[{"M", ",", "1"}], "]"}]}], "\[IndentingNewLine]", "}"}], 
+         "~", "Join", "~", "eigenGraphic", "~", "Join", "~", "svdGra"}]}], 
+       ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"info", "=", 
+        RowBox[{"eigenInfos", "~", "Join", "~", "svdInfo"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{"{", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"StreamPlot3D", "[", 
-           RowBox[{
-            FormBox[
-             RowBox[{"MM", ".", 
-              RowBox[{"{", 
-               RowBox[{"x", ",", "y", ",", "z"}], "}"}]}],
-             TraditionalForm], ",", 
-            RowBox[{"{", 
-             RowBox[{"x", ",", "start", ",", "end"}], "}"}], ",", 
-            RowBox[{"{", 
-             RowBox[{"y", ",", "start", ",", "end"}], "}"}], ",", 
-            RowBox[{"{", 
-             RowBox[{"z", ",", "start", ",", "end"}], "}"}], ",", 
-            RowBox[{"StreamStyle", "->", 
-             RowBox[{"{", 
-              RowBox[{"Opacity", "[", "0.2", "]"}], "}"}]}], ",", 
-            RowBox[{"StreamPoints", "\[Rule]", "20"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"M", "//", "MatrixForm"}], "}"}], ",", 
           "\[IndentingNewLine]", 
-          RowBox[{"(*", 
-           RowBox[{
-            RowBox[{"VectorPlot3D", "[", 
-             RowBox[{
-              FormBox[
-               RowBox[{"MM", ".", 
+          RowBox[{"{", 
+           RowBox[{"Show", "[", 
+            RowBox[{"graphic", ",", "\[IndentingNewLine]", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"600", ",", "600"}], "}"}]}], ",", 
+             RowBox[{"PlotRange", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
                 RowBox[{"{", 
-                 RowBox[{"x", ",", "y", ",", "z"}], "}"}]}],
-               TraditionalForm], ",", 
-              RowBox[{"{", 
-               RowBox[{"x", ",", "start", ",", "end"}], "}"}], ",", 
-              RowBox[{"{", 
-               RowBox[{"y", ",", "start", ",", "end"}], "}"}], ",", 
-              RowBox[{"{", 
-               RowBox[{"z", ",", "start", ",", "end"}], "}"}], ",", 
-              RowBox[{"VectorStyle", "->", 
-               RowBox[{"Opacity", "[", "0.1", "]"}]}]}], "]"}], ","}], "*)"}],
-           "\[IndentingNewLine]", 
-          RowBox[{
-          "(*", "\:6620\:5c04\:540e\:7684\:5411\:91cf\:957f\:5ea6", "*)"}], 
-          "\[IndentingNewLine]", 
-          RowBox[{"(*", 
-           RowBox[{
-            RowBox[{"ContourPlot3D", "[", 
-             RowBox[{
-              FormBox[
-               RowBox[{"1", "/", 
-                RowBox[{"Norm", "[", 
                  RowBox[{
-                  RowBox[{"Inverse", "[", "MM", "]"}], ".", 
-                  RowBox[{"{", 
-                   RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "]"}]}],
-               TraditionalForm], ",", 
+                  RowBox[{"-", "len"}], ",", "len"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "len"}], ",", "len"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "len"}], ",", "len"}], "}"}]}], "}"}]}], ",", 
+             RowBox[{"Axes", "\[Rule]", "True"}], ",", 
+             RowBox[{"AxesStyle", "\[Rule]", 
               RowBox[{"{", 
-               RowBox[{"x", ",", "start", ",", "end"}], "}"}], ",", 
-              RowBox[{"{", 
-               RowBox[{"y", ",", "start", ",", "end"}], "}"}], ",", 
-              RowBox[{"{", 
-               RowBox[{"z", ",", "start", ",", "end"}], "}"}], ",", 
-              RowBox[{"BoundaryStyle", "->", 
-               RowBox[{"Opacity", "[", "0.2", "]"}]}]}], "]"}], ","}], "*)"}],
-           "\[IndentingNewLine]", "\[IndentingNewLine]", 
-          RowBox[{"(*", "\:539f\:5750\:6807\:7cfb", "*)"}], 
-          "\[IndentingNewLine]", 
-          RowBox[{"ListPointPlot3D", "[", 
-           RowBox[{
-            RowBox[{"{", 
-             RowBox[{"{", 
-              RowBox[{"0", ",", "0", ",", "0"}], "}"}], "}"}], ",", 
-            RowBox[{"PlotStyle", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{
-               TemplateBox[<|"color" -> GrayLevel[0.5]|>,
-                "GrayLevelColorSwatchTemplate"], ",", 
-               RowBox[{"PointSize", "[", "Large", "]"}]}], "}"}]}]}], "]"}], 
-          ",", "\[IndentingNewLine]", 
-          RowBox[{"(*", 
-           RowBox[{
-            RowBox[{"DrawArrow", "[", 
-             RowBox[{"ori", ",", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{"1", ",", "0", ",", "0"}], "}"}], "*", "20"}], ",", 
-              "Red", ",", "0.1", ",", "0.8"}], "]"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"DrawArrow", "[", 
-             RowBox[{"ori", ",", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{"0", ",", "1", ",", "0"}], "}"}], "*", "20"}], ",", 
-              "Green", ",", "0.1", ",", "0.8"}], "]"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"DrawArrow", "[", 
-             RowBox[{"ori", ",", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{"0", ",", "0", ",", "1"}], "}"}], "*", "20"}], ",", 
-              "Blue", ",", "0.1", ",", "0.8"}], "]"}], ","}], "*)"}], 
-          "\[IndentingNewLine]", 
-          RowBox[{"DrawMatrixAxis", "[", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{"1", ",", "0", ",", "0"}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{"0", ",", "1", ",", "0"}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{"0", ",", "0", ",", "1"}], "}"}]}], "}"}], "*", 
-             "20"}], ",", 
-            RowBox[{"{", 
-             RowBox[{"Red", ",", "Green", ",", "Blue"}], "}"}], ",", "0.1"}], 
-           "]"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"DrawSphere", "[", 
-           RowBox[{"M", ",", "0.5"}], "]"}], ",", "\[IndentingNewLine]", 
-          "\[IndentingNewLine]", 
-          RowBox[{
-          "(*", "\:84dd\:8272\:53d8\:6362\:540e\:77e9\:9635\:5411\:91cf", 
-           "*)"}], "\[IndentingNewLine]", 
-          RowBox[{"(*", 
-           RowBox[{
-            RowBox[{"DrawArrow", "[", 
-             RowBox[{"ori", ",", 
-              RowBox[{
-               RowBox[{"MM", "[", 
-                RowBox[{"[", 
-                 RowBox[{"All", ",", "1"}], "]"}], "]"}], "*", "5"}], ",", 
-              "Red", ",", "0.3", ",", "0.8"}], "]"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"DrawArrow", "[", 
-             RowBox[{"ori", ",", 
-              RowBox[{
-               RowBox[{"MM", "[", 
-                RowBox[{"[", 
-                 RowBox[{"All", ",", "2"}], "]"}], "]"}], "*", "5"}], ",", 
-              "Green", ",", "0.3", ",", "0.8"}], "]"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"DrawArrow", "[", 
-             RowBox[{"ori", ",", 
-              RowBox[{
-               RowBox[{"MM", "[", 
-                RowBox[{"[", 
-                 RowBox[{"All", ",", "3"}], "]"}], "]"}], "*", "5"}], ",", 
-              "Blue", ",", "0.3", ",", "0.8"}], "]"}], ","}], "*)"}], 
-          "\[IndentingNewLine]", 
-          RowBox[{"DrawMatrixAxis", "[", 
-           RowBox[{
-            RowBox[{"M", "*", "5"}], ",", 
-            RowBox[{"{", 
-             RowBox[{"Red", ",", "Green", ",", "Blue"}], "}"}], ",", "0.3"}], 
-           "]"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"(*", "\:53d8\:6362\:540e\:7684\:7403", "*)"}], 
-          "\[IndentingNewLine]", 
-          RowBox[{"DrawSphere", "[", 
-           RowBox[{"M", ",", "1"}], "]"}]}], "\[IndentingNewLine]", "}"}], 
-        "~", "Join", "~", "eigenGraphic", "~", "Join", "~", "svdGra"}]}], ";",
-       "\[IndentingNewLine]", "\[IndentingNewLine]", 
-      RowBox[{"info", "=", 
-       RowBox[{"eigenInfos", "~", "Join", "~", "svdInfo"}]}], ";", 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{"{", "\[IndentingNewLine]", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"M", "//", "MatrixForm"}], "}"}], ",", 
-         "\[IndentingNewLine]", 
-         RowBox[{"{", 
-          RowBox[{"Show", "[", 
-           RowBox[{"graphic", ",", "\[IndentingNewLine]", 
-            RowBox[{"ImageSize", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"600", ",", "600"}], "}"}]}], ",", 
-            RowBox[{"PlotRange", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"-", "len"}], ",", "len"}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"-", "len"}], ",", "len"}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"-", "len"}], ",", "len"}], "}"}]}], "}"}]}], ",", 
-            RowBox[{"Axes", "\[Rule]", "True"}], ",", 
-            RowBox[{"AxesStyle", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"Red", ",", "Green", ",", "Blue"}], "}"}]}]}], "]"}], 
-          "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", "info"}], 
-        "\[IndentingNewLine]", "}"}], "//", "Column"}]}]}], 
-    "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+               RowBox[{"Red", ",", "Green", ",", "Blue"}], "}"}]}]}], "]"}], 
+           "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", "info"}],
+          "\[IndentingNewLine]", "}"}], "//", "Column"}]}]}], 
+     "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+  "(*", "\:53cd\:5bf9\:79f0\:77e9\:9635", "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"min", "=", 
    RowBox[{"-", "10"}]}], ";", 
@@ -746,25 +750,24 @@ Cell[BoxData[{
  RowBox[{"Manipulate", "[", 
   RowBox[{
    RowBox[{"PlotMatrix", "[", 
-    RowBox[{
-     FormBox[
-      RowBox[{"(", "\[NoBreak]", GridBox[{
-         {"0", 
-          RowBox[{"-", "c"}], "b"},
-         {"c", "0", 
-          RowBox[{"-", "a"}]},
-         {
-          RowBox[{"-", "b"}], "a", "0"}
-        },
-        GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
-        GridBoxSpacings->{"Columns" -> {
-            Offset[0.27999999999999997`], {
-             Offset[0.7]}, 
-            Offset[0.27999999999999997`]}, "Rows" -> {
-            Offset[0.2], {
-             Offset[0.4]}, 
-            Offset[0.2]}}], "\[NoBreak]", ")"}],
-      TraditionalForm], "*", "t"}], "]"}], ",", "\[IndentingNewLine]", 
+    FormBox[
+     RowBox[{"(", "\[NoBreak]", GridBox[{
+        {"0", 
+         RowBox[{"-", "c"}], "b"},
+        {"c", "0", 
+         RowBox[{"-", "a"}]},
+        {
+         RowBox[{"-", "b"}], "a", "0"}
+       },
+       GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.7]}, 
+           Offset[0.27999999999999997`]}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}}], "\[NoBreak]", ")"}],
+     TraditionalForm], "]"}], ",", "\[IndentingNewLine]", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"{", 
@@ -878,13 +881,21 @@ Cell[BoxData[{
    3.88931012590912*^9, 3.889310129932519*^9}, {3.889310170818286*^9, 
    3.8893101708220177`*^9}, {3.889310320467072*^9, 3.8893103670254498`*^9}, 
    3.8893104233687353`*^9, {3.8893121054558887`*^9, 3.889312108433798*^9}, {
-   3.889316256249938*^9, 3.8893162572227907`*^9}, 3.889316303503415*^9},
- CellLabel->"In[1]:=",ExpressionUUID->"1e1abfa1-9638-47b4-a366-71033864c058"],
+   3.889316256249938*^9, 3.8893162572227907`*^9}, 3.889316303503415*^9, {
+   3.9030532544592752`*^9, 3.903053274842987*^9}, {3.903053422087677*^9, 
+   3.903053425528264*^9}, 3.903056783480941*^9, 3.903056821507719*^9, 
+   3.904014730599736*^9, {3.955435796103507*^9, 3.955435796562996*^9}, {
+   3.955435850891465*^9, 3.9554358684374104`*^9}, {3.9554360645218573`*^9, 
+   3.95543606549596*^9}},
+ CellLabel->
+  "In[146]:=",ExpressionUUID->"1e1abfa1-9638-47b4-a366-71033864c058"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", "\:666e\:901a\:7684\:77e9\:9635", "*)"}], 
+  "\[IndentingNewLine]", 
   RowBox[{"Manipulate", "[", 
    RowBox[{
     RowBox[{"PlotMatrix", "[", 
@@ -958,20 +969,21 @@ Cell[BoxData[
     RowBox[{"ContinuousAction", "->", "False"}]}], "\[IndentingNewLine]", 
    "]"}]}]], "Input",
  CellChangeTimes->{
-  3.889310142829211*^9, {3.889312166080831*^9, 3.8893121660824947`*^9}},
- CellLabel->"In[12]:=",ExpressionUUID->"481313b4-10ec-44f5-a94d-8bec9fc253fc"],
+  3.889310142829211*^9, {3.889312166080831*^9, 3.8893121660824947`*^9}, {
+   3.904014712447421*^9, 3.904014725580511*^9}},
+ CellLabel->
+  "In[157]:=",ExpressionUUID->"481313b4-10ec-44f5-a94d-8bec9fc253fc"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
    DynamicModuleBox[{$CellContext`a$$ = 
-    1, $CellContext`b$$ = -4, $CellContext`c$$ = 
-    2., $CellContext`d$$ = -4., $CellContext`e$$ = 
-    1, $CellContext`f$$ = -0.25, $CellContext`g$$ = -1, $CellContext`h$$ = \
--0.6999999999999993, $CellContext`i$$ = -6., Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"\:65e0\:6807\:9898\"", Typeset`specs$$ = {{{
+    1, $CellContext`b$$ = -4, $CellContext`c$$ = -1, $CellContext`d$$ = -4., \
+$CellContext`e$$ = 
+    1, $CellContext`f$$ = -4, $CellContext`g$$ = -1, $CellContext`h$$ = -4., \
+$CellContext`i$$ = -6., Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"\:65e0\:6807\:9898\"", Typeset`specs$$ = {{{
        Hold[$CellContext`a$$], 1}, -10, 10}, {{
        Hold[$CellContext`d$$], -4.}, -10, 10}, {{
        Hold[$CellContext`g$$], -1}, -10, 10}, {{
@@ -1017,8 +1029,9 @@ $CellContext`c$$}, {$CellContext`d$$, $CellContext`e$$, $CellContext`f$$}, \
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.889520867369938*^9},
- CellLabel->"Out[12]=",ExpressionUUID->"4ab4a6d7-9ef6-404e-a9fe-d36b367cf94a"]
+ CellChangeTimes->{3.955436120237584*^9},
+ CellLabel->
+  "Out[157]=",ExpressionUUID->"e12a7973-5a72-4fac-80b5-e87c7c458622"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -1080,13 +1093,23 @@ Cell[BoxData[
  CellChangeTimes->{{3.88923497086266*^9, 3.8892349968116827`*^9}, {
   3.889235027844739*^9, 3.88923504054296*^9}, {3.88931214648025*^9, 
   3.88931214648248*^9}, {3.8893163295499887`*^9, 3.8893163466479673`*^9}},
- CellLabel->"In[13]:=",ExpressionUUID->"27b09e72-5d1a-4712-88f7-39954f5eec2d"],
+ CellLabel->"In[34]:=",ExpressionUUID->"27b09e72-5d1a-4712-88f7-39954f5eec2d"],
 
 Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.889270252091783*^9, 3.889270290958538*^9}, {
   3.889270324049284*^9, 3.889270325918439*^9}, {3.889312129145513*^9, 
   3.88931213864742*^9}},ExpressionUUID->"aab63529-2222-49b9-8a80-\
-519da00fdd7c"]
+519da00fdd7c"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.9030566030454683`*^9, 
+  3.903056654399397*^9}},ExpressionUUID->"f5f27d98-2e3e-4225-9799-\
+db16a69aec2f"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.9030566579037724`*^9, 
+  3.903056658673458*^9}},ExpressionUUID->"fe20a405-f267-4706-b940-\
+e72d8aec13e5"]
 },
 WindowSize->{1440, 775},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
@@ -1107,13 +1130,15 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 37076, 861, 3809, "Input",ExpressionUUID->"1e1abfa1-9638-47b4-a366-71033864c058"],
+Cell[558, 20, 37706, 870, 3851, "Input",ExpressionUUID->"1e1abfa1-9638-47b4-a366-71033864c058"],
 Cell[CellGroupData[{
-Cell[37659, 885, 2559, 76, 381, "Input",ExpressionUUID->"481313b4-10ec-44f5-a94d-8bec9fc253fc"],
-Cell[40221, 963, 2967, 57, 1025, "Output",ExpressionUUID->"4ab4a6d7-9ef6-404e-a9fe-d36b367cf94a"]
+Cell[38289, 894, 2675, 80, 381, "Input",ExpressionUUID->"481313b4-10ec-44f5-a94d-8bec9fc253fc"],
+Cell[40967, 976, 2944, 57, 1025, "Output",ExpressionUUID->"e12a7973-5a72-4fac-80b5-e87c7c458622"]
 }, Open  ]],
-Cell[43203, 1023, 2232, 59, 381, "Input",ExpressionUUID->"27b09e72-5d1a-4712-88f7-39954f5eec2d"],
-Cell[45438, 1084, 246, 4, 30, "Input",ExpressionUUID->"aab63529-2222-49b9-8a80-519da00fdd7c"]
+Cell[43926, 1036, 2232, 59, 381, "Input",ExpressionUUID->"27b09e72-5d1a-4712-88f7-39954f5eec2d"],
+Cell[46161, 1097, 246, 4, 30, "Input",ExpressionUUID->"aab63529-2222-49b9-8a80-519da00fdd7c"],
+Cell[46410, 1103, 154, 3, 30, "Input",ExpressionUUID->"f5f27d98-2e3e-4225-9799-db16a69aec2f"],
+Cell[46567, 1108, 154, 3, 30, "Input",ExpressionUUID->"fe20a405-f267-4706-b940-e72d8aec13e5"]
 }
 ]
 *)

@@ -1,0 +1,194 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6443,        186]
+NotebookOptionsPosition[      5896,        169]
+NotebookOutlinePosition[      6302,        186]
+CellTagsIndexPosition[      6259,        183]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"z", "=", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"x", "+", 
+        RowBox[{"I", "*", " ", "y"}]}], ")"}], "^", "10"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"z", "=", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"3", "+", 
+         RowBox[{"4", "z"}]}], ")"}], "/", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{"2", "z"}]}], ")"}]}]}], ";"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"u", "=", 
+     RowBox[{"ComplexExpand", "[", 
+      RowBox[{"Re", "[", "z", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"v", "=", 
+     RowBox[{"ComplexExpand", "[", 
+      RowBox[{"Im", "[", "z", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"u", ",", "v"}], "}"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", "\:753bz\:77e2\:91cf\:573a", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"curl", "=", 
+     RowBox[{"Curl", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"u", ",", "v"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"\:6240\:6709\:7684", " ", 
+      RowBox[{"Conjugate", "[", 
+       RowBox[{"f", "[", "z", "]"}], "]"}], 
+      "\:662f\:6ca1\:6709\:65cb\:5ea6"}], "\:ff0c", 
+     "\:6ca1\:6709\:6563\:5ea6"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"Curl", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"u", ",", 
+         RowBox[{"-", "v"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y"}], "}"}]}], "]"}], "]"}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Show", "[", "\[IndentingNewLine]", 
+      RowBox[{
+      "(*", " ", "z\:7684\:65cb\:5ea6\:7684\:7b49\:9ad8\:7ebf\:56fe", " ", 
+       "*)"}], "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ContourPlot", "[", 
+        RowBox[{"curl", ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", 
+           RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"y", ",", 
+           RowBox[{"-", "10"}], ",", "10"}], "}"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", "z\:7684\:6d41\:7ebf\:56fe", "*)"}], 
+       "\[IndentingNewLine]", 
+       RowBox[{"StreamPlot", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"u", ",", "v"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", 
+           RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"y", ",", 
+           RowBox[{"-", "10"}], ",", "10"}], "}"}]}], "]"}]}], 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], ",", 
+     RowBox[{"Show", "[", "\[IndentingNewLine]", 
+      RowBox[{"ComplexVectorPlot", "[", 
+       RowBox[{
+        RowBox[{"z", "^", "5"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"z", ",", 
+          RowBox[{
+           RowBox[{"-", "10"}], "-", 
+           RowBox[{"10", "I"}]}], ",", 
+          RowBox[{"10", "+", 
+           RowBox[{"10", "I"}]}]}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+      "]"}], ",", 
+     RowBox[{"StreamPlot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"u", ",", 
+         RowBox[{"-", "v"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", 
+         RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"y", ",", 
+         RowBox[{"-", "10"}], ",", "10"}], "}"}]}], "]"}]}], "}"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.903592956111915*^9, 3.9035930267819157`*^9}, {
+   3.903593332705879*^9, 3.903593426134449*^9}, {3.903593477629867*^9, 
+   3.903593511644081*^9}, 3.90359354950679*^9, {3.903593644509221*^9, 
+   3.9035937207567587`*^9}, {3.903594252760179*^9, 3.9035943715719557`*^9}, {
+   3.9035951594257183`*^9, 3.903595213084626*^9}, {3.9035955306817102`*^9, 
+   3.903595605706525*^9}, {3.904178731350986*^9, 3.9041787503713903`*^9}, {
+   3.904185193244273*^9, 3.904185303146249*^9}, {3.904199667475403*^9, 
+   3.904199730119878*^9}, {3.904199788364517*^9, 3.904199878835744*^9}, {
+   3.95541716107469*^9, 3.9554171631510963`*^9}, {3.955747352804888*^9, 
+   3.95574738193751*^9}, 
+   3.955747476503661*^9},ExpressionUUID->"1b54afa7-be8f-4ec1-a675-\
+f522c3cc71d2"],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.9035955364782743`*^9},
+ CellLabel->"In[56]:=",ExpressionUUID->"0a0434fb-c0ff-43ad-9aee-1b61a9367ec4"],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"ComplexVectorPlot", "[", 
+    RowBox[{
+     RowBox[{"z", "/", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        RowBox[{"k", " ", "z"}]}], ")"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", 
+       RowBox[{
+        RowBox[{"-", "10"}], "-", 
+        RowBox[{"10", "I"}]}], ",", 
+       RowBox[{"10", "+", 
+        RowBox[{"10", "I"}]}]}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"k", ",", "1", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.904185848893361*^9, 3.904185890021432*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"9de8ca4f-cf52-4a2b-bdaf-dbd8c5e87ecd"]
+},
+WindowSize->{1440, 775},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.1 for Mac OS X x86 (64-bit) \
+(2022\:5e746\:670816\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"67a72d69-b343-4927-b894-3e2c0975f565"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4494, 122, 643, "Input",ExpressionUUID->"1b54afa7-be8f-4ec1-a675-f522c3cc71d2"],
+Cell[5055, 144, 168, 2, 52, "Input",ExpressionUUID->"0a0434fb-c0ff-43ad-9aee-1b61a9367ec4"],
+Cell[5226, 148, 666, 19, 44, "Input",ExpressionUUID->"9de8ca4f-cf52-4a2b-bdaf-dbd8c5e87ecd"]
+}
+]
+*)
+
